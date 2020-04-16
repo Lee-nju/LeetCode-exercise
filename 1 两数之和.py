@@ -31,11 +31,10 @@ def twoSum1(nums: list, target: int) -> list:
 
 def twoSum2(nums: list, target: int) -> list:
     """
+    Solution 2:
     暴力求解 O(n2)
 
-    :param nums:
-    :param target:
-    :return:
+    能过，但很慢
     """
     length = len(nums)
     for i in range(length):
@@ -46,11 +45,9 @@ def twoSum2(nums: list, target: int) -> list:
 
 def twoSum3(nums: list, target: int) -> list:
     """
+    Solution 3:
     利用字典: 时间快了很多
 
-    :param nums:
-    :param target:
-    :return:
     """
     d = {}
     n = len(nums)
