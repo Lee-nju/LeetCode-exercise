@@ -1,6 +1,6 @@
 def lengthOfLongestSubstring(s: str) -> [str, int]:
     """
-    两指针法：
+    滑动窗口：
     1.记录当前的字串 2.记录最长的字串 3.不断更新左右指针，直到右指针到达n-1
 
     pass
