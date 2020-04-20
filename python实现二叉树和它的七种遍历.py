@@ -171,5 +171,5 @@ t.preOrderTraverse1()
 t.preOrderTraverse2()
 # 非递归中序遍历
 t.inOrderTraverse()
-# 非递归的后续遍历
+# 非递归的后序遍历
 t.postOrderTraverse()
