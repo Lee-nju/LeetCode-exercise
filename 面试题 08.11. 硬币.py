@@ -2,6 +2,7 @@ mod = 1000000007
 
 
 def waysToChange(n: int) -> int:
+    """数学法"""
     if n <= 0:
         return 0
     if n < 5:
