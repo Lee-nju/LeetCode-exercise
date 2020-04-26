@@ -97,6 +97,7 @@ class Tree(object):
         curNode = self.root
         while stack or curNode:
             while curNode:
+                # 进栈的时候遍历
                 self.__traverse = self.__traverse + str(curNode.value) + sep
                 stack.append(curNode)
                 curNode = curNode.lChild
@@ -119,6 +120,7 @@ class Tree(object):
                 curNode = curNode.lChild
 
             curNode = stack.pop()
+            # 出栈的时候遍历
             self.__traverse = self.__traverse + str(curNode.value) + sep
             curNode = curNode.rChild
 
