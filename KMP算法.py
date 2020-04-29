@@ -13,7 +13,7 @@ def KMP(str1: str, str2: str) -> int:
         elif i2 != -1:
             i2 = next_arr[i2]
         else:
-            i1 = i2 = 0
+            i1 = i1 + 1
 
     return i1 - n2 if i2 == n2 else -1
 
