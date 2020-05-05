@@ -22,13 +22,11 @@ class TreeNode:
             k = len(queue)
             for j in range(k):
                 node = queue.popleft()
-                if i == len(l):
-                    continue
-                if l[i] != 'null':
+                if i < len(l) and l[i] != 'null':
                     node.left = TreeNode(l[i])
                     queue.append(node.left)
                 i = i + 1
-                if l[i] != 'null':
+                if i < len(l) and l[i] != 'null':
                     node.right = TreeNode(l[i])
                     queue.append(node.right)
                 i = i + 1
@@ -51,7 +49,6 @@ class TreeNode:
 
         print(m_list)
 
-
-l = [5, 1, 4, 'null', 'null', 3, 6, 7, 'null', 1, 'null', 'null', 'null', 'null', 'null']
-m_tree = TreeNode(-1).list2Tree(l)
-m_tree.print_tree()
+# l = [5, 1, 4, 'null', 'null', 3, 6, 7, 'null', 1]
+# m_tree = TreeNode(-1).list2Tree(l)
+# m_tree.print_tree()
