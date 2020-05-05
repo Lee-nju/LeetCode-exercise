@@ -8,11 +8,6 @@ class TreeNode:
         self.left = None
         self.right = None
 
-
-class Tree:
-    def __init__(self):
-        self.root = TreeNode(-1)
-
     def list2Tree(self, l: [int]):
         """
         将list=[5,1,4,null,null,3,6] 转成树节点的格式
@@ -20,9 +15,9 @@ class Tree:
         :param l:
         :return:
         """
-        self.root = TreeNode(l[0])
+        root = TreeNode(l[0])
         i, queue = 1, deque()
-        queue.append(self.root)
+        queue.append(root)
         while queue:
             k = len(queue)
             for j in range(k):
@@ -37,14 +32,14 @@ class Tree:
                     node.right = TreeNode(l[i])
                     queue.append(node.right)
                 i = i + 1
-        return self
+        return root
 
     def print_tree(self):
         """层次遍历输出"""
-        if self.root.val == -1:
+        if self.val == -1:
             return
         queue = deque()
-        queue.append(self.root)
+        queue.append(self)
         m_list = []
         while queue:
             node = queue.popleft()
@@ -58,5 +53,5 @@ class Tree:
 
 
 l = [5, 1, 4, 'null', 'null', 3, 6, 7, 'null', 1, 'null', 'null', 'null', 'null', 'null']
-m_tree = Tree().list2Tree(l)
+m_tree = TreeNode(-1).list2Tree(l)
 m_tree.print_tree()
