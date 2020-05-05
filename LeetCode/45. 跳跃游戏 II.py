@@ -45,7 +45,44 @@ def jump(nums: [int]) -> int:
             farthest_reach = cur_max_reach
 
 
-def jump2(nums: [int]) -> int:
+def jump_priority(nums: [int]):
+    """
+    对jump()的在空间上的优化
+
+    时间复杂度: O(N) 空间复杂度:O(1)
+    pass
+
+    :return:
+    """
+    # 空数组
+    if not nums:
+        return
+
+    n = len(nums)
+    # 单元素数组
+    if n == 1:
+        return 0
+
+    if nums[0] >= n - 1:
+        return 1
+
+    # step: 当前的步数 reach_under_step: step步能到达的最远位置
+    step, reach_under_step = 1, nums[0]
+    farthest_reach = nums[0]
+    for i in range(0, n):
+        if farthest_reach < i:
+            return
+        if i > reach_under_step:
+            reach_under_step = farthest_reach
+            step = step + 1
+        cur_max_reach = i + nums[i]
+        if cur_max_reach >= n - 1:
+            return step + 1
+        if cur_max_reach > farthest_reach:
+            farthest_reach = cur_max_reach
+
+
+def jump_reverse_travel(nums: [int]) -> int:
     """
     Solution:
     从后往前, 当前位置为i, step[i]表示从位置i到位置n-1的最小步数
@@ -96,6 +133,11 @@ def search_least(res):
     return v
 
 
-print(jump([2, 3, 1, 1, 4]))
-print(jump([2, 2, 1, 1, 4]))
-print(jump([2, 2, 1, 0, 4]))
+# print(jump([2, 3, 1, 1, 4]))
+# print(jump([2, 2, 1, 1, 4]))
+# print(jump([2, 2, 1, 0, 4]))
+
+# print(jump_priority([2, 3, 1, 1, 4]))
+# print(jump_priority([2, 2, 1, 1, 4]))
+# print(jump_priority([2, 2, 1, 0, 4]))
+print(jump_priority([1, 2]))
