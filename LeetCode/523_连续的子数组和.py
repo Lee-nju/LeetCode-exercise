@@ -7,7 +7,7 @@ def checkSubarraySum(nums: [int], k: int) -> bool:
     3. 如果sum_of_subArray % k 在d中，返回true；否则将sum_of_subArray % k放入字典中
     4. 返回False
 
-    时间复杂度: O(N) 空间复杂度:O(N)
+    时间复杂度: O(N) 空间复杂度:O(min(n, k))
 
     pass
     :param nums:
