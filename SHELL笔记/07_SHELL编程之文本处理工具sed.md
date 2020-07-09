@@ -11,7 +11,7 @@ typora-root-url: ..\..\pictures
 
 - **Windows系统​**	
 
- ![edit](./edit.png)
+ ![edit](./pictures/edit.png)
 
 - **Linux系统**
 
@@ -27,7 +27,7 @@ sed是Stream Editor（流编辑器）的缩写，简称流编辑器；用来==�
 
 >  sed是==一行一行读取==文件内容并==按照要求==进行==处理==，把处理后的结果==输出到屏幕==。
 
-![sed](./sed.png)
+![sed](./pictures/sed.png)
 
 1. 首先sed读取文件中的一行内容，把其保存在一个==临时缓存区中==（也称为模式空间）
 2. 然后==根据需求==处理临时缓冲区中的行，完成后把该行==发送到屏幕上==
