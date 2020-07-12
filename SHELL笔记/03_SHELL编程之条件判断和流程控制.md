@@ -438,7 +438,7 @@ wget -P /shell/ $web_server &>/dev/null
 
 ```
 
-##3. 课堂练习
+## 3. 课堂练习
 
 ### ㈠ 判断用户是否存在
 
@@ -506,10 +506,17 @@ id $username &>/dev/null
 
 ### ㈡ 判断软件包是否安装
 
-**需求2：**用脚本判断一个软件包是否安装，如果没安装则安装它（假设本地yum已配合）
+**需求2：**用脚本判断一个软件包是否安装，如果没安装则安装它（假设本地yum已配合，mac安装软件用brew）
 
 ```powershell
-
+#!/bin/bash
+# 判断gdb有没有安装
+brew list | grep -w gdb
+if [ $? -eq 0 ]
+		echo "用户" "$(who am i | cut -d ' ' -f1)" "已经安装过 gdb!"
+	else
+		echo "用户" "$(who am i | cut -d ' ' -f1)" "没有安装过 gdb!"
+fi
 ```
 
 ### ㈢ 判断当前主机的内核版本
