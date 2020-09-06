@@ -8,7 +8,7 @@ typora-root-url: pictures
 - 了解shell中的通配符
 - 熟悉grep、cut、sort等小工具和shell中的通配符的使用
 
-#一、文本处理工具
+# 一、文本处理工具
 
 ## 1. ==grep工具==
 
@@ -363,7 +363,7 @@ patching file file1
 -s：串行处理，非并行
 ~~~
 
-##8. tr工具
+## 8. tr工具
 
 >  tr用于字符转换，替换和删除；主要用于==删除文件中控制字符==或进行==字符转换==
 
@@ -400,12 +400,8 @@ patching file file1
 | [:blank:]          | 所有水平空白         |                                                              |
 | [:punct:]          | 匹配所有标点符号     |                                                              |
 | [:space:]          | 所有水平或垂直的空格 |                                                              |
-| [:cntrl:]          | 所有控制字符         | \f Ctrl-L        走行换页<br/>\n Ctrl-J  	换行
-\r Ctrl-M        回车
-\t Ctrl-I  	tab键 |
-
-
-**举例说明：**
+| [:cntrl:]          | 所有控制字符         | \f  Ctrl-L        走行换页<br/>\n Ctrl-J  	   换行<br/>\n Ctrl-J  	   换行<br/>\r  Ctrl-M       回车<br/>\t  Ctrl-I  	   tab键 |
+### **举例说明**
 
 ~~~powershell
 [root@MissHou  shell01]# cat 3.txt 	自己创建该文件用于测试
@@ -444,7 +440,7 @@ hello world 888
 
 ~~~
 
-#### 小试牛刀
+## 9. 小试牛刀
 
 1. 使用小工具分别截取当前主机IP；截取NETMASK；截取广播地址；截取MAC地址
 
@@ -486,10 +482,10 @@ Tab只能补全==命令和文件== （RHEL6/Centos6）
 
 ~~~powershell
 ^c   			终止前台运行的程序
-^z	  			将前台运行的程序挂起到后台
+^z	  		将前台运行的程序挂起到后台
 ^d   			退出 等价exit
 ^l   			清屏 
-^a |home  	光标移到命令行的最前端
+^a |home  光标移到命令行的最前端
 ^e |end  	光标移到命令行的后端
 ^u   			删除光标前所有字符
 ^k   			删除光标后所有字符
